@@ -1,0 +1,5 @@
+seed: 42
+features: ["Pclass", "Sex", "Age", "Fare"]
+model_params:
+  n_estimators: 100
+  random_state: 42
