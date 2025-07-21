@@ -33,6 +33,14 @@ titanic-mlops-package/
 
 │ └── ci.yml # GitHub Actions CI
 
+├── data/
+
+│ └── raw/
+
+│ ├── train.csv # Train dataset
+
+│ └── test.csv # Test dataset
+
 ├── Dockerfile # container definition
 
 ├── requirements.txt # pinned dependencies
@@ -46,7 +54,7 @@ titanic-mlops-package/
 
 1. Clone the repository:  
     ```bash
-    git clone https://github.com/<your-username>/titanic-mlops-package.git
+    git clone https://github.com/mahdisdg/titanic-mlops-package.git
     cd titanic-mlops-package
     ```
 2. Install dependencies:  
@@ -63,7 +71,6 @@ titanic-mlops-package/
 ### 1. Prepare Data & Train Model
 
 ```bash
-# place your raw CSV (e.g., train.csv) in data/raw/
 python -m titanic_mlops.data --input data/raw/train.csv --output data/processed/titanic_clean.csv
 python -m titanic_mlops.model --input data/processed/titanic_clean.csv --output models/model.pkl
 ```
